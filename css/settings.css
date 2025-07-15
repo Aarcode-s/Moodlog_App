@@ -1,0 +1,42 @@
+.label {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5vh;
+  margin-right: 0.8vh;
+ 
+}
+
+/* Styling the select dropdown itself */
+#notification {
+  padding: 10px 14px;
+  width: 15vw;
+  border: 2px solid #333;
+  border-radius: 12px;
+  background-color: #c1ff72;
+  text-align: center;
+  font-family: "Chewy", cursive, sans-serif;
+  font-size: 1.3rem;
+  color: #333;
+  cursor: pointer;
+  appearance: none; /* Removes default arrow in some browsers */
+}
+
+/* Styling the dropdown options */
+#notification option {
+  border-radius: 12px;
+  background-color: #fff3c2;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 10px;
+  font-family: "Chewy", cursive, sans-serif;
+}
+.mode{
+    background-color: #fff3c2 ;
+}
+.logout{
+    background-color: #5ce1e6;
+}
+.deleteaccount{
+    background-color: tomato;
+}

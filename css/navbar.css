@@ -1,0 +1,47 @@
+.nav-wrapper {
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #67ff21;
+  border-radius: 20px;
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 0 2px #c4aaff;
+  z-index: 100;
+  text-align: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-family: "Chewy", cursive;
+}
+
+.hidden {
+  display: none !important;
+}
+.logout-button {
+  background-color: #c4aaff;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 17vw;
+  height: 8vh;
+  padding: 5px;
+  font-family: "Chewy", cursive, sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.logout-button:hover,
+.logout-button:focus {
+  transform: scale(1.05);
+  outline: 2px solid black;
+}

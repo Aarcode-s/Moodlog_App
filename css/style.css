@@ -1,0 +1,152 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== BASE BODY STYLES ========== */
+body {
+  background-color: #fff3c2; /* Soft yellow background */
+  font-family: "Chewy", cursive, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2vh;
+}
+
+/* ========== HEADER STYLES ========== */
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2vh 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+ .moodlog {
+  margin: 0 1.5vw;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.moodlog:hover {
+  transform: scale(1.1);
+}
+
+/* ========== MAIN CONTAINER ========== */
+.container {
+  width: 35vw;
+  height: 80vh;
+  background-color: #ff914d;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+/* ========== FORM STYLES ========== */
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+/* Input fields */
+#form input {
+  width: 30vw;
+  height: 6vh;
+  border-radius: 20px;
+  border: 1px solid grey;
+  padding: 5px;
+  font-family: "Chewy", cursive, sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #c1ff72;
+  transition: all 0.3s ease;
+}
+
+#form input:hover,
+#form input:focus {
+  transform: scale(1.05);
+  outline: 2px solid black;
+}
+
+/* Buttons */
+.button {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 17vw;
+  height: 7vh;
+  padding: 5px;
+  font-family: "Chewy", cursive, sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+  transform: scale(1.05);
+  outline: 2px solid black;
+}
+
+/* Login and Signup colors */
+.login {
+  background-color: #5ce1e6;
+}
+
+.signup {
+  background-color: #bea1f7;
+}
+
+/* Terms & Conditions */
+.tc {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.tc:hover,
+.tc:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* ========== RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+  .title, .moodlog {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 90vw;
+    height: auto;
+    padding: 5vh 2vw;
+  }
+
+  #form input {
+    width: 80vw;
+  }
+
+  .button {
+    width: 60vw;
+  }
+}
+

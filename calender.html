@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moodlog | Calendar</title>
+    <link rel="stylesheet" href="css/calender.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="title">This Month</div>
+      <div class="nav-wrapper">
+        <div class="moodlog" onclick="toggleNavbar()">MOODLOG</div>
+        <div id="navbar-container"></div>
+        <!-- Move it here -->
+      </div>
+    </header>
+    <div class="calender-wrapper">
+      <div class="calendar-grid" id="calendar"></div>
+
+      <!-- Popup Modal -->
+      <div class="overlay hidden" id="overlay"></div>
+      <div class="log-tile hidden" id="logTile">
+        <div class="tile-date" id="tileDate">
+          07-07-2025 <span id="tileEmoji"></span>
+        </div>
+        <div class="tile-content">
+          <p><strong>Gratitude :-</strong></p>
+          <ul id="gratitudeList"></ul>
+          <p class="log" id="logText"></p>
+        </div>
+        <button onclick="closeTile()">Close</button>
+      </div>
+    </div>
+    <script src="js/navbar.js"></script>
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/calender.js"></script>
+  </body>
+</html>

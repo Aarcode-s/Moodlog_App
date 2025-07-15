@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Chewy", cursive;
+  background-color: #fff3c2;
+  padding: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
+.moodlog {
+  margin: 0 1.5vw;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.moodlog:hover {
+  transform: scale(1.1);
+}
+
+.goal-header {
+  background-color: #ffb657;
+  padding: 10px 40px;
+  width: 600px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  box-shadow: 0 0 0 2px #ffaaff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 80px;
+}
+
+/* Left Panel */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 35%;
+}
+
+.circle {
+  background-color: #ee8467;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  box-shadow: 0 0 0 3px #ffc49b;
+}
+
+.info-tile {
+  background-color: #ffb657;
+  width: 25vw;
+  height: 6vh;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 1.6rem;
+  box-shadow: 0 0 0 2px #ffaaff;
+  text-align: center;
+}
+
+/* Right Panel */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  gap: 20px;
+}
+
+.profile-card {
+  background-color: #ff914d;
+  padding: 30px;
+  border-radius: 25px;
+  width: 30vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 0 2px #c4aaff;
+}
+
+.photo {
+  align-self: flex-end;
+}
+
+.profile-photo {
+  background-color: #ffb657;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-img-label {
+  width: 100%;
+  height: 100%;
+  cursor: pointer; /* Show pointer when hovering image */
+  display: block;
+}
+
+.profile-img-label img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  pointer-events: none; /* allow click to go to label/input */
+}
+
+.inputbox {
+  margin-top: 40px;
+}
+
+.input-box {
+  background-color: #ffd98c;
+  border: none;
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  font-family: "Chewy", cursive;
+  font-size: 1.2rem;
+  box-shadow: 0 0 0 2px #c4aaff;
+}
+
+.edit-button {
+  margin-top: 20px;
+  background-color: #d9b3ff;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-size: 1.3rem;
+  font-family: "Chewy", cursive;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.edit-button:hover {
+  transform: scale(1.05);
+}
+
+/* Hide upload label if used elsewhere */
+.upload-label {
+  display: none;
+}

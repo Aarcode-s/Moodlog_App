@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Moodlog</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="moodlog">Moodlog</div>
+    </header>
+
+    <div class="container">
+      <form id="form">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+        <button type="submit" class="login button">Login</button>
+        <button
+          type="button"
+          class="signup button"
+          onclick="window.location.href='register.html'"
+        >
+          Signup
+        </button>
+      </form>
+
+      <p><a href="#" class="tc">Terms & Conditions</a></p>
+
+    </div>
+  </body>
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/login.js"></script>
+</html>

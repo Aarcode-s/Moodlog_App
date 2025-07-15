@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile | Moodlog</title>
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="header">
+    <div class="title">Profile</div>
+    <!-- <div class="goal-header">Mental Goal of Week</div> -->
+    <div class="nav-wrapper">
+      <div class="moodlog" onclick="toggleNavbar()">MOODLOG</div>
+      <div id="navbar-container"></div>
+    </div>
+  </header>
+
+  <main class="profile-container">
+    <section class="left-panel">
+      <div class="circle mood-summary">General<br />Moode</div>
+      <div class="info-tile">Total logs</div>
+      <div class="info-tile">Since 11-07-2025</div>
+    </section>
+
+    <section class="right-panel">
+      <div class="profile-card">
+        <div class="photo">
+          <div class="profile-photo" id="profile-photo">
+            <img id="profile-image" src="assets/profile.png" alt="Profile Picture" />
+            <input type="file" id="image-upload" accept="image/*" style="display: none;" />
+          </div>
+        </div>
+
+        <div class="inputbox">
+          <input type="text" class="input-box" id="username" placeholder="Your Name" />
+          <input type="email" class="input-box" id="useremail" placeholder="Your Email" />
+        </div>
+
+        <button class="edit-button" id="save-profile">Update Profile</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/navbar.js"></script>
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/profile.js"></script>
+</body>
+</html>
