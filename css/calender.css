@@ -109,12 +109,23 @@ header {
   background-color: #ff914d;
   padding: 30px;
   border-radius: 25px;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;  
+  max-height: 80vh;            /* ✅ Prevent it from getting too wide */
   z-index: 20;
   font-family: "Chewy", cursive;
   box-shadow: 0 0 0 2px #c4aaff;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;     /* ✅ Break long words/text */
+  word-break: break-word;        /* ✅ Ensures long words wrap inside */
+  overflow-x: hidden;   
+  overflow-y:auto;         /* ✅ Prevent horizontal scroll */
+}
+
+.log-tile::-webkit-scrollbar {
+  display: none;
 }
 
 .log-tile button {
