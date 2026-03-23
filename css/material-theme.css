@@ -1,0 +1,187 @@
+:root {
+  --md-primary: #6750a4;
+  --md-on-primary: #ffffff;
+  --md-secondary: #625b71;
+  --md-surface: #fffbfe;
+  --md-surface-variant: #f3edf7;
+  --md-outline: #cac4d0;
+  --md-on-surface: #1c1b1f;
+  --md-success: #146c2e;
+  --md-error: #b3261e;
+  --md-shadow: 0 8px 30px rgba(31, 27, 36, 0.12);
+  --md-radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--md-on-surface);
+  background: radial-gradient(circle at top right, #efe6ff 0%, #f8f4ff 35%, #fdf8ff 100%);
+  margin: 0;
+  min-height: 100vh;
+}
+
+.header {
+  background: color-mix(in srgb, var(--md-primary) 88%, #000 12%);
+  color: var(--md-on-primary);
+  border: 0;
+  box-shadow: var(--md-shadow);
+}
+
+.title,
+.moodlog {
+  color: var(--md-on-primary);
+  letter-spacing: 0.4px;
+}
+
+.container,
+.profile-container,
+.page-content,
+.calender-wrapper {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 2rem auto;
+}
+
+form,
+.profile-card,
+.logbook,
+.gratitude,
+.moodpart,
+.log,
+.log-tile,
+.left-panel .circle,
+.left-panel .info-tile,
+.calendar-grid .day {
+  background: var(--md-surface);
+  border: 1px solid var(--md-outline);
+  border-radius: var(--md-radius);
+  box-shadow: var(--md-shadow);
+}
+
+input,
+textarea,
+.input-box {
+  width: 100%;
+  border: 1px solid var(--md-outline);
+  border-radius: 12px;
+  padding: 0.8rem 0.95rem;
+  font-size: 0.98rem;
+  background: #fff;
+  color: var(--md-on-surface);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus,
+.input-box:focus {
+  outline: none;
+  border-color: var(--md-primary);
+  box-shadow: 0 0 0 3px rgba(103, 80, 164, 0.16);
+}
+
+button,
+.button,
+.edit-button,
+.logout-button {
+  border: none;
+  border-radius: 999px;
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  padding: 0.72rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+}
+
+button:hover,
+.button:hover,
+.edit-button:hover,
+.logout-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(103, 80, 164, 0.28);
+}
+
+button:disabled,
+.button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.signup.button,
+.deleteaccount.button {
+  background: color-mix(in srgb, var(--md-secondary) 82%, #000 18%);
+}
+
+.logout.button {
+  background: color-mix(in srgb, var(--md-primary) 70%, #000 30%);
+}
+
+.navbar {
+  background: var(--md-surface);
+  border: 1px solid var(--md-outline);
+  border-radius: 14px;
+  box-shadow: var(--md-shadow);
+}
+
+.navbar a,
+.navbar button {
+  color: var(--md-on-surface);
+}
+
+.navbar a:hover {
+  background: var(--md-surface-variant);
+}
+
+.moodpart img {
+  border-radius: 14px;
+  border: 2px solid transparent;
+  padding: 0.25rem;
+  transition: transform 0.18s, border-color 0.18s, background-color 0.18s;
+}
+
+.moodpart img:hover,
+.moodpart img.selected {
+  transform: translateY(-2px);
+  border-color: var(--md-primary);
+  background: #f4edff;
+}
+
+.calendar-grid .day {
+  min-height: 108px;
+  padding: 0.65rem;
+}
+
+.day .tile-emoji {
+  font-size: 1.6rem;
+}
+
+.overlay {
+  background: rgba(25, 18, 40, 0.45);
+}
+
+.log-tile {
+  border: 1px solid var(--md-outline);
+}
+
+.tc {
+  color: var(--md-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tc:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .profile-container,
+  .page-content,
+  .calender-wrapper {
+    width: calc(100% - 1rem);
+    margin: 1rem auto;
+  }
+}
