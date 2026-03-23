@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
       if (error.code === 'auth/requires-recent-login') {
         alert('Please log in again to delete your account.');
-        window.location.href = 'index.html';
+        window.location.href = 'login.html';
       } else {
         alert('Error deleting account.');
         console.error(error);

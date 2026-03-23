@@ -1,16 +1,15 @@
-// Load reusable navbar markup
+// Step A: Load navbar.html
 fetch("navbar.html")
   .then((res) => res.text())
   .then((data) => {
     document.getElementById("navbar-container").innerHTML = data;
 
+    // Step B: Toggle logic
     const appName = document.querySelector(".moodlog");
     const nav = document.getElementById("navbar");
 
-    if (!appName || !nav) return;
-
     appName.addEventListener("click", function (e) {
-      e.stopPropagation();
+      e.stopPropagation(); // Prevent document click from hiding it
       nav.classList.toggle("hidden");
     });
 
@@ -20,6 +19,7 @@ fetch("navbar.html")
       }
     });
 
+    // ✅ Step C: Logout binding after navbar is loaded
     const logoutBtn = document.querySelector(".logout-button");
     if (logoutBtn) {
       logoutBtn.addEventListener("click", async () => {
@@ -32,15 +32,4 @@ fetch("navbar.html")
         }
       });
     }
-  })
-  .catch((error) => {
-    console.error("Failed to load navbar:", error);
   });
-
-// Support existing inline onclick="toggleNavbar()" in page headers.
-window.toggleNavbar = function toggleNavbar() {
-  const nav = document.getElementById("navbar");
-  if (nav) {
-    nav.classList.toggle("hidden");
-  }
-};
