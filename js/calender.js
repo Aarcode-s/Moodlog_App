@@ -22,7 +22,7 @@ const moodLogs = {}; // store mood logs fetched from Firestore
 
 auth.onAuthStateChanged(async user => {
   if (!user) {
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
     return;
   }
 
